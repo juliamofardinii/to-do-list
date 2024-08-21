@@ -1,7 +1,7 @@
 ## To-do List com Dark Mode
 Um site onde o usuário pode colocar as suas tarefas diárias, removê-las e também marcar como concluído. Também coloquei a opção de dark-mode e light-mode para o usuário utilizar como preferir.
 
-## Técnicas e teclogias utilizadas
+## Técnicas e tecnologias utilizadas
 * HTML
 * CSS
 * JavaScript
