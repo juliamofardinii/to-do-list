@@ -8,45 +8,78 @@
     outline: none;
 }
 
-:root{
+:root {
     --label-icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/lua.png");
-    --container-bg: #DED0B6;
+    --container-bg: #e7d9be;
+    --btn-color: #EEEDEB;
+    --footer-color:#EEEDEB;
+    --img-task: url("img/Task-cuate-dark.svg");
+    --bg-cor:#fdfdfd;
 }
 
-body{
+body {
+    min-height: 100vh;
     background: var(--bg-cor);
     color: var(--fonte-cor);
+    display: flex;
+    flex-direction: column;
 }
 
-.dark-mode{
+.dark-mode {
     --label-icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/sol.png");
     --bg-cor: #191919;
     --fonte-cor: #ffffff;
-    --container-bg: #333333; 
+    --container-bg: #333333;
+    --btn-color: #868484;
+    --footer-color:#868484;
+    --img-task: url("img/Task-cuate-light.svg");
 }
 
-.mudar-tema{
+
+.mudar-tema {
     background: var(--label-icon);
     padding: 67px;
     background-repeat: no-repeat;
-    position: absolute;
+    position:absolute;
     top: 4%;
     left: 4%;
     cursor: pointer;
 }
 
-#btn{
+.img-container {
+    width: 280px;
+    /* Ajuste conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    background: url("file:///C:/Users/Julia%20Mofardini/Documents/GitHub/to-do-list/img/Task-cuate-light.svg");
+}
+
+
+#btn {
     display: none;
 }
 
 .to__do__paragrafo {
     font-size: 30px;
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
     font-family: "Krona One", sans-serif;
 }
 
+.hr-paragrafo {
+    border-top: 1px solid #e4e4e4;
+    /* Espessura e cor da linha */
+    width: 50%;
+    /* Largura da linha */
+    margin: 20px auto;
+    /* Margem superior e inferior e centralização automática */
+}
+
 .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
     background-color: var(--container-bg);
     width: 500px;
     border-radius: 10px;
@@ -68,7 +101,7 @@ body{
     border: none;
     border-radius: 5px;
     height: 40px;
-    background-color: #B2A59B;
+    background-color: var(--btn-color);
     font-size: 17px;
     padding: 0 15px;
     float: right;
@@ -109,19 +142,42 @@ body{
     text-decoration: line-through;
 }
 
-.image-container{
+.image-container {
     margin: 10px 0;
     width: 20%;
     text-align: center;
     float: right;
-    margin-right: 80px; 
+    margin-right: 80px;
     text-align: center;
     position: relative;
 }
 
-.image-container img{
+.image-container img {
     width: 120%;
     height: auto;
     transform: scaleX(-1);
     margin-top: -50px;
+}
+
+.img-task {
+    display: flex;
+    align-content: center;
+    background: var(--img-task);
+    background-size: cover;
+    width: 420px;
+    height: 350px;
+    margin-bottom: 30px;
+    position:initial;
+    top: 10%;
+    right: 8%;
+}
+
+footer {
+    background-color: var(--footer-color);
+    color: #45474B;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 50px;
 }
